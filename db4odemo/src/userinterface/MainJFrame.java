@@ -60,6 +60,12 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         });
 
+        userNameJTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                userNameJTextFieldActionPerformed(evt);
+            }
+        });
+
         jLabel1.setText("User Name");
 
         jLabel2.setText("Password");
@@ -123,6 +129,14 @@ public class MainJFrame extends javax.swing.JFrame {
 
     private void loginJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginJButtonActionPerformed
         // Get user name
+        String username = userNameJTextField.getName();
+        String password = passwordField.getPassword().toString();
+        System.out.println(""+dB4OUtil.retrieveSystem().getUserAccountDirectory().authenticateUser("ramcharan", "sysadmin"));
+        if(dB4OUtil.retrieveSystem().getUserAccountDirectory().authenticateUser(username, password).toString().equals(username)){
+            System.out.println("login success");
+        }
+        else
+            System.out.println("Login fail");
        
     }//GEN-LAST:event_loginJButtonActionPerformed
 
@@ -142,6 +156,10 @@ public class MainJFrame extends javax.swing.JFrame {
         crdLyt.next(container);
         dB4OUtil.storeSystem(system);
     }//GEN-LAST:event_logoutJButtonActionPerformed
+
+    private void userNameJTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userNameJTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_userNameJTextFieldActionPerformed
 
     /**
      * @param args the command line arguments
