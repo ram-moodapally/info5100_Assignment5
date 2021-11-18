@@ -11,13 +11,20 @@ package Business.Restaurant;
  */
 public class Dishes {
     private String name;
-    private String price;
+    private Double price;
     private String description;
+    private int dishEnergy;
 
-    public Dishes(String name,String description,String price) {
+    public int getDishEnergy() {
+        return dishEnergy;
+    }
+    
+
+    public Dishes(String name,String description,Double price,int energy) {
         this.name=name;
         this.price=price;
         this.description=description;
+        this.dishEnergy = energy;
     }
     
 
@@ -29,11 +36,11 @@ public class Dishes {
         this.name = name;
     }
 
-    public String getPrice() {
+    public Double getPrice() {
         return price;
     }
 
-    public void setPrice(String price) {
+    public void setPrice(Double price) {
         this.price = price;
     }
 

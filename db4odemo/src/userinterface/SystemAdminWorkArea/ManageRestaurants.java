@@ -67,6 +67,7 @@ public class ManageRestaurants extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(204, 204, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         networkJTable.setModel(new javax.swing.table.DefaultTableModel(
@@ -160,7 +161,7 @@ public class ManageRestaurants extends javax.swing.JPanel {
         jLabel5.setText("Username:");
         add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 360, 70, 30));
 
-        jLabel1.setText("Create the restaurant ");
+        jLabel1.setText("Create the restaurant account");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 270, 380, 30));
 
         jLabel2.setText("List of all Restaurants. Select to make any changes ");

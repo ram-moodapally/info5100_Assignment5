@@ -49,8 +49,8 @@ public class RestaurantDirectory {
         restro.setNumber(number);
     }
     
-    public Dishes AddMenuDishes(Restaurant restro,String name,String desc,String amount){
-        menu=new Dishes(name, desc, amount);
+    public Dishes AddMenuDishes(Restaurant restro,String name,String desc,Double amount, int energy){
+        menu=new Dishes(name, desc, amount, energy);
         restro.addDishes(menu);
         return menu;
     }

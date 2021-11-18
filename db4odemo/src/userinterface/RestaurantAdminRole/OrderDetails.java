@@ -67,6 +67,8 @@ public class OrderDetails extends javax.swing.JPanel {
         BackBtn = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         statusBtn = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        TotalTxt = new javax.swing.JTextField();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -118,6 +120,17 @@ public class OrderDetails extends javax.swing.JPanel {
             }
         });
         add(statusBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 330, -1, -1));
+
+        jLabel2.setText("Total(in USD): ");
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 280, -1, 20));
+
+        TotalTxt.setText("jTextField1");
+        TotalTxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TotalTxtActionPerformed(evt);
+            }
+        });
+        add(TotalTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 280, -1, 20));
     }// </editor-fold>//GEN-END:initComponents
 
     private void BackBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackBtnActionPerformed
@@ -144,10 +157,16 @@ public class OrderDetails extends javax.swing.JPanel {
         
     }//GEN-LAST:event_statusBtnActionPerformed
 
+    private void TotalTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TotalTxtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TotalTxtActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BackBtn;
+    private javax.swing.JTextField TotalTxt;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable orderTable;
     private javax.swing.JButton statusBtn;

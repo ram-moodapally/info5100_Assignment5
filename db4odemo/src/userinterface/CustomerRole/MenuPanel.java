@@ -27,7 +27,7 @@ import javax.swing.table.DefaultTableModel;
 public class MenuPanel extends javax.swing.JPanel {
 
     private JPanel userProcessContainer;
-    int sum=0;
+    Double sum=0.0;
     private UserAccount userAccount;
     Restaurant restro;
     EcoSystem system;
@@ -50,11 +50,12 @@ public class MenuPanel extends javax.swing.JPanel {
             DefaultTableModel model = (DefaultTableModel) menuTable.getModel();
         
             model.setRowCount(0);
-                Object[] row = new Object[3];
+                Object[] row = new Object[4];
                 for(Dishes dish:restro.getMenu()){
                      row[0] = dish;
                      row[1] = dish.getDescription();
                      row[2] = dish.getPrice();
+                     row[3] = dish.getDishEnergy();
                      model.addRow(row);
                 }  
     }
@@ -69,7 +70,7 @@ public class MenuPanel extends javax.swing.JPanel {
                      row[0] = dish;
                      row[1] = dish.getDescription();
                      row[2] = dish.getPrice();
-                     sum=sum+Integer.parseInt(dish.getPrice());
+                     sum=sum+dish.getPrice();
                      model.addRow(row);
                 }  
      }
@@ -96,6 +97,7 @@ public class MenuPanel extends javax.swing.JPanel {
         addressTxt = new javax.swing.JTextField();
         enterpriseLabel1 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(204, 204, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         cardBtn.setText("Add to Cart");
@@ -154,20 +156,20 @@ public class MenuPanel extends javax.swing.JPanel {
 
         menuTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
             },
             new String [] {
-                "Dish Name", "Description", "Amount"
+                "Dish Name", "Description", "Amount", "Energy( Kcal) "
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false
+                false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -180,7 +182,7 @@ public class MenuPanel extends javax.swing.JPanel {
         });
         jScrollPane2.setViewportView(menuTable);
 
-        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 130, -1, 100));
+        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 130, 480, 100));
 
         orderBtn1.setText("Order");
         orderBtn1.addActionListener(new java.awt.event.ActionListener() {
@@ -271,7 +273,7 @@ public class MenuPanel extends javax.swing.JPanel {
         
         
         JOptionPane.showMessageDialog(null,"Your Order is placed","Thank You",JOptionPane.WARNING_MESSAGE);
-        sum=0;
+        sum=0.0;
         userProcessContainer.remove(this);
         Component[] componentArray = userProcessContainer.getComponents();
         Component component = componentArray[componentArray.length - 1];
@@ -292,7 +294,7 @@ public class MenuPanel extends javax.swing.JPanel {
             Dishes item=(Dishes)cartTable.getValueAt(selectedRow, 0);
             
             items.remove(item);
-            sum=sum-Integer.parseInt(item.getPrice());
+            sum=sum-item.getPrice();
             DefaultTableModel model = (DefaultTableModel) cartTable.getModel();
         model.setRowCount(0);
             Object[] row = new Object[3];

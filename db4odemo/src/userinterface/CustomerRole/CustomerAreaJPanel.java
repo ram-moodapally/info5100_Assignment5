@@ -50,11 +50,12 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
        
                 Object[] row = new Object[3];
                 //System.out.println();
-                for(Restaurant restro:system.getRestaurantDirectory().getRestaurantList()){
-                     row[0] = restro;
+                for(Restaurant restroList:system.getRestaurantDirectory().getRestaurantList()){
+                     row[0] = restroList;
                      //System.out.println(restro.getAdminUName());
-                     row[1] = restro.getAddress();
-                     row[2] = restro.getNumber();
+                     row[1] = restroList.getAddress();
+                     System.out.println(restroList.getAdminUName());
+                     row[2] = restroList.getNumber();
                      model.addRow(row);
                 }
             
@@ -153,24 +154,24 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
 
         valueLabel2.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         valueLabel2.setText("Your Past Orders");
-        add(valueLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 280, 210, 26));
+        add(valueLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 250, 210, 26));
 
         pastTbl.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
             },
             new String [] {
-                "Order ID", "Restaurent Name", "Amount", "Status"
+                "Order ID", "Restaurent Name", "Amount", "Status", "Rating"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, true, false
+                false, false, true, false, true
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -183,7 +184,7 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
         });
         jScrollPane2.setViewportView(pastTbl);
 
-        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 320, -1, 100));
+        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 290, 500, 100));
     }// </editor-fold>//GEN-END:initComponents
 
     private void requestTestJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_requestTestJButtonActionPerformed
@@ -232,7 +233,6 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
           for (Customer cust:system.getCustomerDirectory().getCustList()) {
            
             if (cust.getUserName().equals(account.getUsername())) {
-               // System.out.println(restro.getOrderList());
                for(Order menu:cust.getOrderList()){
                 Object[] row = new Object[4];
                 row[0] = menu;

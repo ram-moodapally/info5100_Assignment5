@@ -28,7 +28,12 @@ public class Order {
     private ArrayList<Dishes> Order;
     private String cost;
     private String status;
-    private String review;
+    private String review; // comments about the dish
+    private int rating; // 0-5 per dish
+
+    public int getRating() {
+        return rating;
+    }
 
     public String getReview() {
         return review;
