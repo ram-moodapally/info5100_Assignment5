@@ -60,12 +60,6 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         });
 
-        userNameJTextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                userNameJTextFieldActionPerformed(evt);
-            }
-        });
-
         jLabel1.setText("User Name");
 
         jLabel2.setText("Password");
@@ -129,15 +123,31 @@ public class MainJFrame extends javax.swing.JFrame {
 
     private void loginJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginJButtonActionPerformed
         // Get user name
-        String username = userNameJTextField.getName();
-        String password = passwordField.getPassword().toString();
-        System.out.println(""+dB4OUtil.retrieveSystem().getUserAccountDirectory().authenticateUser("ramcharan", "sysadmin"));
-        if(dB4OUtil.retrieveSystem().getUserAccountDirectory().authenticateUser(username, password).toString().equals(username)){
-            System.out.println("login success");
+         UserAccount ua = system.getUserAccountDirectory().authenticateUser(userNameJTextField.getText(), passwordField.getText());
+         System.out.println("hurrayyyy");
+         try {
+             if(ua==null){
+                 
+                 JOptionPane.showMessageDialog(null," wrong credentials ");
+                 userNameJTextField.setText("");
+                 passwordField.setText("");
+                 throw new Exception();
+             }
+            
+        } catch (Exception e) {
+             return;
         }
-        else
-            System.out.println("Login fail");
-       
+         System.out.println(""+ua.getUsername());
+         
+//        System.out.println(ua.getUsername());        
+        CardLayout layout = (CardLayout) container.getLayout();
+        //container.add(new  SystemAdminWorkAreaJPanel(container, system));
+        container.add(ua.getRole().createWorkArea(container, ua, system));
+        layout.next(container);
+        logoutJButton.setEnabled(true);
+        userNameJTextField.setEnabled(false);
+        passwordField.setEnabled(false);
+        loginJButton.setEnabled(false);
     }//GEN-LAST:event_loginJButtonActionPerformed
 
     private void logoutJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutJButtonActionPerformed
@@ -156,10 +166,6 @@ public class MainJFrame extends javax.swing.JFrame {
         crdLyt.next(container);
         dB4OUtil.storeSystem(system);
     }//GEN-LAST:event_logoutJButtonActionPerformed
-
-    private void userNameJTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userNameJTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_userNameJTextFieldActionPerformed
 
     /**
      * @param args the command line arguments
