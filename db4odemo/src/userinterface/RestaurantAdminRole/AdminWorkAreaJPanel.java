@@ -57,7 +57,7 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
                 manageRestoInfoActionPerformed(evt);
             }
         });
-        add(manageRestoInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 230, 180, -1));
+        add(manageRestoInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 260, 190, 40));
 
         manageMenu.setText("Manage menu");
         manageMenu.addActionListener(new java.awt.event.ActionListener() {
@@ -65,7 +65,7 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
                 manageMenuActionPerformed(evt);
             }
         });
-        add(manageMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 180, 150, -1));
+        add(manageMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 200, 190, 40));
 
         manageOrders.setText("Manage Orders");
         manageOrders.addActionListener(new java.awt.event.ActionListener() {
@@ -73,7 +73,7 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
                 manageOrdersActionPerformed(evt);
             }
         });
-        add(manageOrders, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 130, -1, -1));
+        add(manageOrders, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 140, 190, 40));
 
         enterpriseLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         enterpriseLabel.setText("Restaurant :");

@@ -20,7 +20,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author chief_kmv
+ * @author ramcharan
  */
 public class ManageDeliveryMan extends javax.swing.JPanel {
 
@@ -61,6 +61,7 @@ public class ManageDeliveryMan extends javax.swing.JPanel {
         jLabel4 = new javax.swing.JLabel();
         PasswordField = new javax.swing.JPasswordField();
         jButton1 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -118,9 +119,9 @@ public class ManageDeliveryMan extends javax.swing.JPanel {
         });
         add(ConfirmBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(408, 153, -1, -1));
 
-        jLabel5.setText("Username");
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(118, 253, -1, 20));
-        add(nameJTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(207, 208, 144, -1));
+        jLabel5.setText("Username:");
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 310, 70, 30));
+        add(nameJTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 270, 144, -1));
 
         backJButton.setText("<< Back");
         backJButton.addActionListener(new java.awt.event.ActionListener() {
@@ -130,7 +131,7 @@ public class ManageDeliveryMan extends javax.swing.JPanel {
         });
         add(backJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 501, -1, -1));
 
-        submitJButton.setText("Submit");
+        submitJButton.setText("Create");
         submitJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 submitJButtonActionPerformed(evt);
@@ -138,19 +139,19 @@ public class ManageDeliveryMan extends javax.swing.JPanel {
         });
         add(submitJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(621, 492, -1, -1));
 
-        jLabel3.setText("Name");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(118, 213, -1, -1));
-        add(uNameTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(208, 249, 144, -1));
+        jLabel3.setText("Name:");
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 280, 50, 20));
+        add(uNameTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 310, 144, -1));
 
-        jLabel4.setText("Password");
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(113, 295, -1, -1));
+        jLabel4.setText("Password:");
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 350, -1, -1));
 
         PasswordField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 PasswordFieldActionPerformed(evt);
             }
         });
-        add(PasswordField, new org.netbeans.lib.awtextra.AbsoluteConstraints(207, 292, 144, -1));
+        add(PasswordField, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 350, 144, -1));
 
         jButton1.setText("Refresh");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -159,6 +160,9 @@ public class ManageDeliveryMan extends javax.swing.JPanel {
             }
         });
         add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 70, -1, -1));
+
+        jLabel1.setText("Enter the details below to add the deliverMan");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 230, 360, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void updateBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateBtnActionPerformed
@@ -423,6 +427,7 @@ public class ManageDeliveryMan extends javax.swing.JPanel {
     private javax.swing.JButton backJButton;
     private javax.swing.JButton deleteBtn;
     private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;

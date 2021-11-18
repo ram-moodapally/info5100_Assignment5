@@ -18,7 +18,7 @@ import userinterface.CustomerRole.MenuPanel;
 
 /**
  *
- * @author chief_kmv
+ * @author ramcharan
  */
 public class ManageOrders extends javax.swing.JPanel {
 
@@ -107,7 +107,7 @@ public class ManageOrders extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(orderTable);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 70, 580, 87));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 100, 580, 87));
 
         backBtn.setText("<<<Back");
         backBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -115,7 +115,7 @@ public class ManageOrders extends javax.swing.JPanel {
                 backBtnActionPerformed(evt);
             }
         });
-        add(backBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
+        add(backBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 370, -1, -1));
 
         viewOrderBtn.setText("Ready to Deliver");
         viewOrderBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -123,7 +123,7 @@ public class ManageOrders extends javax.swing.JPanel {
                 viewOrderBtnActionPerformed(evt);
             }
         });
-        add(viewOrderBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 210, -1, -1));
+        add(viewOrderBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 280, -1, -1));
 
         AssignBtn1.setText("Assign to Delivery Man ");
         AssignBtn1.addActionListener(new java.awt.event.ActionListener() {
@@ -131,7 +131,7 @@ public class ManageOrders extends javax.swing.JPanel {
                 AssignBtn1ActionPerformed(evt);
             }
         });
-        add(AssignBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 210, -1, -1));
+        add(AssignBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 280, -1, -1));
 
         jButton1.setText("Refresh");
         jButton1.addActionListener(new java.awt.event.ActionListener() {

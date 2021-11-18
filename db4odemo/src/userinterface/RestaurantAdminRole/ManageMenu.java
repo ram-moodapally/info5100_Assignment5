@@ -19,7 +19,7 @@ import userinterface.SystemAdminWorkArea.SystemAdminWorkAreaJPanel;
 
 /**
  *
- * @author chief_kmv
+ * @author ramcharan
  */
 public class ManageMenu extends javax.swing.JPanel {
 
@@ -62,7 +62,7 @@ public class ManageMenu extends javax.swing.JPanel {
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setText("Description");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 380, -1, -1));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 380, 90, -1));
 
         amtTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -79,7 +79,7 @@ public class ManageMenu extends javax.swing.JPanel {
                 {null, null, null}
             },
             new String [] {
-                "Dish Name", "Description", "Prize"
+                "Dish Name", "Description", "Amount"
             }
         ) {
             Class[] types = new Class [] {
@@ -111,8 +111,8 @@ public class ManageMenu extends javax.swing.JPanel {
         });
         add(dishNameTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 320, 100, -1));
 
-        jLabel3.setText("Amount");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 430, -1, -1));
+        jLabel3.setText("Amount(in USD) :");
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 430, 130, -1));
 
         descTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
