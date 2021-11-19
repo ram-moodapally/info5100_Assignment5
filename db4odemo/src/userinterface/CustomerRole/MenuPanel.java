@@ -40,7 +40,7 @@ public class MenuPanel extends javax.swing.JPanel {
         
         this.userProcessContainer = userProcessContainer;
         this.restro=restro;
-       this.system=system;
+        this.system=system;
         this.userAccount = account;
         populateTable();
         valueLabel.setText(restro.getName());
@@ -70,9 +70,12 @@ public class MenuPanel extends javax.swing.JPanel {
                      row[0] = dish;
                      row[1] = dish.getDescription();
                      row[2] = dish.getPrice();
-                     sum=sum+dish.getPrice();
                      model.addRow(row);
-                }  
+                     sum=sum+dish.getPrice();
+                     
+                }
+                customerTotalTxt.setText(""+sum);
+                customerTotalTxt.setEnabled(false);
      }
 
     /**
@@ -96,6 +99,8 @@ public class MenuPanel extends javax.swing.JPanel {
         RemoveBtn = new javax.swing.JButton();
         addressTxt = new javax.swing.JTextField();
         enterpriseLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        customerTotalTxt = new javax.swing.JTextField();
 
         setBackground(new java.awt.Color(204, 204, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -106,7 +111,7 @@ public class MenuPanel extends javax.swing.JPanel {
                 cardBtnActionPerformed(evt);
             }
         });
-        add(cardBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 260, -1, -1));
+        add(cardBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 220, -1, -1));
 
         backJButton.setText("<<Back");
         backJButton.addActionListener(new java.awt.event.ActionListener() {
@@ -152,7 +157,7 @@ public class MenuPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(cartTable);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 320, -1, 100));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 270, -1, 100));
 
         menuTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -182,7 +187,7 @@ public class MenuPanel extends javax.swing.JPanel {
         });
         jScrollPane2.setViewportView(menuTable);
 
-        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 130, 480, 100));
+        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 110, 480, 100));
 
         orderBtn1.setText("Order");
         orderBtn1.addActionListener(new java.awt.event.ActionListener() {
@@ -204,6 +209,16 @@ public class MenuPanel extends javax.swing.JPanel {
         enterpriseLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         enterpriseLabel1.setText("Order Here:");
         add(enterpriseLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 120, 30));
+
+        jLabel2.setText("Total(in USD): ");
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 380, 90, 20));
+
+        customerTotalTxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                customerTotalTxtActionPerformed(evt);
+            }
+        });
+        add(customerTotalTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 380, 80, 20));
     }// </editor-fold>//GEN-END:initComponents
 
     private void cardBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cardBtnActionPerformed
@@ -310,14 +325,20 @@ public class MenuPanel extends javax.swing.JPanel {
         
     }//GEN-LAST:event_RemoveBtnActionPerformed
 
+    private void customerTotalTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_customerTotalTxtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_customerTotalTxtActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton RemoveBtn;
     private javax.swing.JTextField addressTxt;
     private javax.swing.JButton backJButton;
     private javax.swing.JButton cardBtn;
     private javax.swing.JTable cartTable;
+    private javax.swing.JTextField customerTotalTxt;
     private javax.swing.JLabel enterpriseLabel;
     private javax.swing.JLabel enterpriseLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable menuTable;

@@ -285,10 +285,11 @@ public class ManageMenu extends javax.swing.JPanel {
             if (restro.getAdminUName().equals(account.getUsername())) {
                 
                for(Dishes menu:restro.getMenu()){
-                Object[] row = new Object[3];
+                Object[] row = new Object[4];
                 row[0] = menu.getName();
                 row[1] = menu.getDescription();
                 row[2] = menu.getPrice();
+                row[3] = menu.getDishEnergy();
                 model.addRow(row);
                }
                 

@@ -14,7 +14,17 @@ import java.util.ArrayList;
  */
 public class Order {
     private String order_id;
-
+    private String restaurentName;
+    private String customerName;
+    private String deliverMan;
+    private ArrayList<Dishes> Order;
+    private String cost;
+    private String status;
+    private String deliveryAddress;
+    private String review; // comments about the dish
+    private int rating; // 0-5 per dish
+    
+    
     public String getOrder_id() {
         return order_id;
     }
@@ -22,14 +32,6 @@ public class Order {
     public void setOrder_id(String order_id) {
         this.order_id = order_id;
     }
-    private String restaurentName;
-    private String customerName;
-    private String deliverMan;
-    private ArrayList<Dishes> Order;
-    private String cost;
-    private String status;
-    private String review; // comments about the dish
-    private int rating; // 0-5 per dish
 
     public int getRating() {
         return rating;
@@ -49,12 +51,7 @@ public class Order {
 
     public void setStatus(String status) {
         this.status = status;
-    }
-
-   
-    private String deliveryAddress;
-    
-    
+    }    
 
     public String getRestaurentName() {
         return restaurentName;

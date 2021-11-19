@@ -63,6 +63,7 @@ public class ManageDeliveryMan extends javax.swing.JPanel {
         jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(0, 204, 204));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         updateBtn.setText("Update");
@@ -89,7 +90,7 @@ public class ManageDeliveryMan extends javax.swing.JPanel {
                 {null, null, null}
             },
             new String [] {
-                "Name", "User Name", "Password"
+                "Person Name", "User Name", "Password"
             }
         ) {
             Class[] types = new Class [] {
@@ -139,8 +140,8 @@ public class ManageDeliveryMan extends javax.swing.JPanel {
         });
         add(submitJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(621, 492, -1, -1));
 
-        jLabel3.setText("Name:");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 280, 50, 20));
+        jLabel3.setText("Person Name:");
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 280, 90, 20));
         add(uNameTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 310, 144, -1));
 
         jLabel4.setText("Password:");

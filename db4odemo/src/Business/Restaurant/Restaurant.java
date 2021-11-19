@@ -16,7 +16,10 @@ public class Restaurant {
     private String adminUName;
     private ArrayList<Dishes> Menu;
     private ArrayList<Order> orderList;
-    int id=101;
+    int id=505;
+    private String name;
+    private String address;
+    private String number;
 
     public ArrayList<Order> getOrderList() {
         return orderList;
@@ -74,10 +77,7 @@ public class Restaurant {
         orderList=new ArrayList<Order>();
     }
     
-  
-    private String name;
-    private String address;
-    private String number;
+
 
     public String getAddress() {
         return address;
