@@ -61,18 +61,20 @@ public class ManageMenu extends javax.swing.JPanel {
         jLabel4 = new javax.swing.JLabel();
         energyTxt = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(153, 153, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setText("Description:");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 290, 90, 30));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 310, 90, 30));
 
         amtTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 amtTxtActionPerformed(evt);
             }
         });
-        add(amtTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 320, 100, -1));
+        add(amtTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 340, 100, -1));
 
         MenuTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -105,24 +107,24 @@ public class ManageMenu extends javax.swing.JPanel {
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 100, 700, 100));
 
         jLabel2.setText("Dish Name:");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 266, -1, 20));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 280, -1, 20));
 
         dishNameTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 dishNameTxtActionPerformed(evt);
             }
         });
-        add(dishNameTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 260, 100, -1));
+        add(dishNameTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 280, 100, -1));
 
         jLabel3.setText("Amount(in USD) :");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 320, 120, 30));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 340, 120, 30));
 
         descTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 descTxtActionPerformed(evt);
             }
         });
-        add(descTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 290, 100, -1));
+        add(descTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 310, 100, -1));
 
         deleteBtn.setText("Delete");
         deleteBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -130,7 +132,7 @@ public class ManageMenu extends javax.swing.JPanel {
                 deleteBtnActionPerformed(evt);
             }
         });
-        add(deleteBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 210, -1, -1));
+        add(deleteBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(334, 219, 100, 40));
 
         backBtn.setText("<<<Back");
         backBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -138,7 +140,7 @@ public class ManageMenu extends javax.swing.JPanel {
                 backBtnActionPerformed(evt);
             }
         });
-        add(backBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
+        add(backBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(53, 430, 110, 40));
 
         addDishBtn.setText("Add Dish");
         addDishBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -146,7 +148,7 @@ public class ManageMenu extends javax.swing.JPanel {
                 addDishBtnActionPerformed(evt);
             }
         });
-        add(addDishBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 500, -1, -1));
+        add(addDishBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(602, 430, 110, 40));
         add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 350, -1, -1));
 
         energyTxt.addActionListener(new java.awt.event.ActionListener() {
@@ -154,10 +156,14 @@ public class ManageMenu extends javax.swing.JPanel {
                 energyTxtActionPerformed(evt);
             }
         });
-        add(energyTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 350, 100, 30));
+        add(energyTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 370, 100, 30));
 
         jLabel5.setText("Energy (in Kcal):");
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 360, 100, -1));
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 380, 100, -1));
+
+        jLabel6.setFont(new java.awt.Font("Sana", 2, 13)); // NOI18N
+        jLabel6.setText("Manage your dishes here");
+        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(265, 46, 230, 30));
     }// </editor-fold>//GEN-END:initComponents
 
     private void amtTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_amtTxtActionPerformed
@@ -312,6 +318,7 @@ public class ManageMenu extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }
