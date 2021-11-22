@@ -310,6 +310,7 @@ public class MenuPanel extends javax.swing.JPanel {
         }
         else{
             Dishes item=(Dishes)cartTable.getValueAt(selectedRow, 0);
+            System.out.println("item is"+item.getName());
             
             items.remove(item);
             sum=sum-item.getPrice();
