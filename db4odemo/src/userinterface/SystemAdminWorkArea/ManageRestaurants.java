@@ -98,16 +98,16 @@ public class ManageRestaurants extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(networkJTable);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 90, 404, 91));
-        add(nameJTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(324, 320, 150, 30));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 40, 404, 91));
+        add(nameJTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 240, 150, 30));
 
-        backJButton.setText("<< Back");
+        backJButton.setText("<-- Back");
         backJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backJButtonActionPerformed(evt);
             }
         });
-        add(backJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(42, 528, -1, -1));
+        add(backJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 370, -1, -1));
 
         submitJButton.setText("Create Restaurant");
         submitJButton.addActionListener(new java.awt.event.ActionListener() {
@@ -115,24 +115,24 @@ public class ManageRestaurants extends javax.swing.JPanel {
                 submitJButtonActionPerformed(evt);
             }
         });
-        add(submitJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 530, 150, -1));
+        add(submitJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 360, 150, -1));
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(131, 585, -1, -1));
 
         jLabel3.setText("Name:");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 330, 50, 20));
-        add(uNameTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(324, 360, 150, 30));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 250, 50, 20));
+        add(uNameTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 280, 150, 30));
 
         jLabel4.setText("Password:");
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 400, 70, 30));
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 320, 70, 30));
 
         PasswordField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 PasswordFieldActionPerformed(evt);
             }
         });
-        add(PasswordField, new org.netbeans.lib.awtextra.AbsoluteConstraints(324, 406, 150, 30));
+        add(PasswordField, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 320, 150, 30));
 
         updateBtn.setText("Update");
         updateBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -140,7 +140,7 @@ public class ManageRestaurants extends javax.swing.JPanel {
                 updateBtnActionPerformed(evt);
             }
         });
-        add(updateBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 210, -1, -1));
+        add(updateBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 140, -1, -1));
 
         deleteBtn.setText("Delete");
         deleteBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -148,7 +148,7 @@ public class ManageRestaurants extends javax.swing.JPanel {
                 deleteBtnActionPerformed(evt);
             }
         });
-        add(deleteBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 210, -1, -1));
+        add(deleteBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 140, -1, -1));
 
         ConfirmBtn.setText("Confirm Update");
         ConfirmBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -156,16 +156,16 @@ public class ManageRestaurants extends javax.swing.JPanel {
                 ConfirmBtnActionPerformed(evt);
             }
         });
-        add(ConfirmBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 210, -1, -1));
+        add(ConfirmBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 140, -1, -1));
 
         jLabel5.setText("Username:");
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 360, 70, 30));
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 280, 70, 30));
 
         jLabel1.setText("Create the restaurant account");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 270, 380, 30));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 190, 380, 30));
 
         jLabel2.setText("List of all Restaurants. Select to make any changes ");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 30, 420, 20));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 10, 420, 20));
     }// </editor-fold>//GEN-END:initComponents
 
     private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed

@@ -100,7 +100,7 @@ public class OrderDetails extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(orderTable);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 130, 520, 140));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 70, 520, 140));
 
         BackBtn.setText("<< Back");
         BackBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -108,10 +108,10 @@ public class OrderDetails extends javax.swing.JPanel {
                 BackBtnActionPerformed(evt);
             }
         });
-        add(BackBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 290, 110, 40));
+        add(BackBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 240, 110, 40));
 
         jLabel1.setText("Order List");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 100, -1, -1));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 40, -1, -1));
 
         statusBtn.setText("Change Status to Ready to Deliver");
         statusBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -119,7 +119,7 @@ public class OrderDetails extends javax.swing.JPanel {
                 statusBtnActionPerformed(evt);
             }
         });
-        add(statusBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(387, 290, 270, 40));
+        add(statusBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 240, 270, 40));
     }// </editor-fold>//GEN-END:initComponents
 
     private void BackBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackBtnActionPerformed

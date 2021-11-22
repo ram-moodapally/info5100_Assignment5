@@ -67,14 +67,14 @@ public class ManageMenu extends javax.swing.JPanel {
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setText("Description:");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 310, 90, 30));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 240, 90, 30));
 
         amtTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 amtTxtActionPerformed(evt);
             }
         });
-        add(amtTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 340, 100, -1));
+        add(amtTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 270, 100, -1));
 
         MenuTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -104,27 +104,27 @@ public class ManageMenu extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(MenuTable);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 100, 700, 100));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 60, 700, 100));
 
         jLabel2.setText("Dish Name:");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 280, -1, 20));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 210, -1, 20));
 
         dishNameTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 dishNameTxtActionPerformed(evt);
             }
         });
-        add(dishNameTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 280, 100, -1));
+        add(dishNameTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 210, 100, -1));
 
         jLabel3.setText("Amount(in USD) :");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 340, 120, 30));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 270, 120, 30));
 
         descTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 descTxtActionPerformed(evt);
             }
         });
-        add(descTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 310, 100, -1));
+        add(descTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 240, 100, -1));
 
         deleteBtn.setText("Delete");
         deleteBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -132,15 +132,15 @@ public class ManageMenu extends javax.swing.JPanel {
                 deleteBtnActionPerformed(evt);
             }
         });
-        add(deleteBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(334, 219, 100, 40));
+        add(deleteBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 170, 100, 40));
 
-        backBtn.setText("<<<Back");
+        backBtn.setText("<--Back");
         backBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backBtnActionPerformed(evt);
             }
         });
-        add(backBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(53, 430, 110, 40));
+        add(backBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 360, 110, 40));
 
         addDishBtn.setText("Add Dish");
         addDishBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -148,7 +148,7 @@ public class ManageMenu extends javax.swing.JPanel {
                 addDishBtnActionPerformed(evt);
             }
         });
-        add(addDishBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(602, 430, 110, 40));
+        add(addDishBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 360, 110, 40));
         add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 350, -1, -1));
 
         energyTxt.addActionListener(new java.awt.event.ActionListener() {
@@ -156,14 +156,14 @@ public class ManageMenu extends javax.swing.JPanel {
                 energyTxtActionPerformed(evt);
             }
         });
-        add(energyTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 370, 100, 30));
+        add(energyTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 300, 100, 30));
 
         jLabel5.setText("Energy (in Kcal):");
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 380, 100, -1));
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 310, 100, -1));
 
         jLabel6.setFont(new java.awt.Font("Sana", 2, 13)); // NOI18N
         jLabel6.setText("Manage your dishes here");
-        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(265, 46, 230, 30));
+        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 10, 230, 30));
     }// </editor-fold>//GEN-END:initComponents
 
     private void amtTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_amtTxtActionPerformed
@@ -260,12 +260,13 @@ public class ManageMenu extends javax.swing.JPanel {
                 for(Restaurant restro:system.getRestaurantDirectory().getRestaurantList()){
                     if(restro.getAdminUName().equals(account.getUsername())){
                         system.getRestaurantDirectory().DeleteDishes(restro, menu);
+                        System.out.println("in the restroom"+menu);
                     }   
                 }
                 populateTable();
             }
         }else{
-            JOptionPane.showMessageDialog(null, "Please select a Row!!");
+            JOptionPane.showMessageDialog(null, "Please select a Row to delete!!");
         }
     }//GEN-LAST:event_deleteBtnActionPerformed
 

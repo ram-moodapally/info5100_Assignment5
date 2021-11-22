@@ -71,9 +71,11 @@ public class MenuPanel extends javax.swing.JPanel {
                      row[1] = dish.getDescription();
                      row[2] = dish.getPrice();
                      model.addRow(row);
-                     sum=sum+dish.getPrice();
+                     //sum=sum+dish.getPrice();
+                     sum = Double.parseDouble(customerTotalTxt.getText()) + dish.getPrice();
                      
                 }
+                
                 customerTotalTxt.setText(""+sum);
                 customerTotalTxt.setEnabled(false);
      }
@@ -111,23 +113,23 @@ public class MenuPanel extends javax.swing.JPanel {
                 cardBtnActionPerformed(evt);
             }
         });
-        add(cardBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 220, -1, -1));
+        add(cardBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 79, 150, 30));
 
-        backJButton.setText("<<Back");
+        backJButton.setText("<--Back");
         backJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backJButtonActionPerformed(evt);
             }
         });
-        add(backJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 560, -1, -1));
+        add(backJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 360, -1, -1));
 
         valueLabel.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         valueLabel.setText("<value>");
-        add(valueLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 70, 130, -1));
+        add(valueLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 30, 130, -1));
 
         enterpriseLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         enterpriseLabel.setText("Address:");
-        add(enterpriseLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 480, 120, 30));
+        add(enterpriseLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 190, 120, 30));
 
         cartTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -157,7 +159,7 @@ public class MenuPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(cartTable);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 270, -1, 100));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 190, -1, 100));
 
         menuTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -187,7 +189,7 @@ public class MenuPanel extends javax.swing.JPanel {
         });
         jScrollPane2.setViewportView(menuTable);
 
-        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 110, 480, 100));
+        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 70, 480, 100));
 
         orderBtn1.setText("Order");
         orderBtn1.addActionListener(new java.awt.event.ActionListener() {
@@ -195,7 +197,7 @@ public class MenuPanel extends javax.swing.JPanel {
                 orderBtn1ActionPerformed(evt);
             }
         });
-        add(orderBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 540, -1, -1));
+        add(orderBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 350, -1, -1));
 
         RemoveBtn.setText("Remove From Cart");
         RemoveBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -203,22 +205,23 @@ public class MenuPanel extends javax.swing.JPanel {
                 RemoveBtnActionPerformed(evt);
             }
         });
-        add(RemoveBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 430, -1, -1));
-        add(addressTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 490, 170, -1));
+        add(RemoveBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 130, -1, -1));
+        add(addressTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 220, 170, 80));
 
         enterpriseLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         enterpriseLabel1.setText("Order Here:");
         add(enterpriseLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 120, 30));
 
         jLabel2.setText("Total(in USD): ");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 380, 90, 20));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 300, 90, 20));
 
+        customerTotalTxt.setText("0.0");
         customerTotalTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 customerTotalTxtActionPerformed(evt);
             }
         });
-        add(customerTotalTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 380, 80, 20));
+        add(customerTotalTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 300, 90, 20));
     }// </editor-fold>//GEN-END:initComponents
 
     private void cardBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cardBtnActionPerformed
@@ -310,6 +313,8 @@ public class MenuPanel extends javax.swing.JPanel {
             
             items.remove(item);
             sum=sum-item.getPrice();
+            
+    customerTotalTxt.setText(""+sum);
             DefaultTableModel model = (DefaultTableModel) cartTable.getModel();
         model.setRowCount(0);
             Object[] row = new Object[3];
@@ -320,6 +325,7 @@ public class MenuPanel extends javax.swing.JPanel {
                      
                      model.addRow(row);
                 }  
+                
           
         }
         

@@ -57,6 +57,8 @@ public class Restaurant {
     public void removeDishes(Dishes menu){
         
         Menu.remove(menu);
+        System.out.println("dishes 0 is "+Menu.get(0));
+        System.out.println(" removed"+Menu.remove(menu));
     }
 
     
